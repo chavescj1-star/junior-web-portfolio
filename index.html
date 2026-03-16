@@ -1,20 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jordan Chaves | Junior Web Developer</title>
-  <meta name="description" content="Portfolio website for a junior web developer candidate targeting Google and other top software companies." />
+  <title>Jordan Chaves | Junior Web Developer Portfolio</title>
+  <meta name="description" content="Junior web developer portfolio for Jordan Chaves featuring responsive front-end projects, clean code, and deployment-ready builds." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
   <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="#home">Jordan Chaves<span>.</span></a>
-      <nav>
+    <div class="container nav-wrap">
+      <a href="#top" class="logo" aria-label="Homepage">JC.</a>
+      <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#artwork">Artwork</a>
@@ -23,69 +26,83 @@
     </div>
   </header>
 
-  <main id="home">
+  <main id="top">
     <section class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow">Google Junior Web Developer Portfolio</p>
+        <p class="eyebrow">JUNIOR WEB DEVELOPER PORTFOLIO</p>
         <h1>Building clean, fast, and user-focused web experiences.</h1>
-        <p class="lede">
-          Junior web developer with a focus on responsive front-end development,
-          polished UI, and production-ready deployment workflows.
+        <p class="lead">
+          I’m Jordan Chaves, a junior web developer focused on responsive front-end development,
+          polished UI, and practical deployment workflows that turn ideas into production-ready experiences.
         </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="mailto:your@email.com">Contact Me</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
         </div>
-        <ul class="hero-metrics">
-          <li><strong>3</strong><span>Featured GitHub projects</span></li>
-          <li><strong>100%</strong><span>Responsive layouts</span></li>
-          <li><strong>Live</strong><span>Deployment-ready apps</span></li>
-        </ul>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Featured GitHub projects</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Responsive layouts</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">Live</span>
+            <span class="stat-label">Deployment-ready apps</span>
+          </article>
+        </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-badge">Open to Junior Roles</div>
+
+      <aside class="hero-panel card">
+        <span class="pill">Open to Junior Roles</span>
         <h2>Core Strengths</h2>
-        <ul>
+        <ul class="strength-list">
           <li>HTML, CSS, JavaScript</li>
           <li>Responsive UI development</li>
           <li>GitHub workflow & clean commits</li>
           <li>Deployment with GitHub Pages / Vercel</li>
+          <li>Readable, scalable front-end structure</li>
         </ul>
-      </div>
+      </aside>
     </section>
 
-    <section id="about" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">About</p>
-        <h2>Why this portfolio works for junior web development applications</h2>
-      </div>
-      <div class="grid two">
-        <article class="card">
+    <section class="section container" id="about">
+      <p class="section-label">ABOUT</p>
+      <h2>Why this portfolio works for junior web development applications</h2>
+      <div class="two-col">
+        <article class="card info-card">
           <h3>Hiring-ready presentation</h3>
           <p>
             This site is structured to highlight practical skills employers care about:
             real projects, deployment links, readable code structure, and a professional layout.
           </p>
         </article>
-        <article class="card">
+        <article class="card info-card">
           <h3>GitHub-friendly setup</h3>
           <p>
-            The portfolio is built as a lightweight static site so it can be uploaded directly
-            to GitHub and published quickly with GitHub Pages.
+            The portfolio uses a lightweight static build so it can be updated quickly,
+            hosted free on GitHub Pages, and shared directly with recruiters and hiring managers.
           </p>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>3 strong GitHub projects</h2>
-        <p>Replace the placeholder text and links below with your real apps and repositories.</p>
+    <section class="section container" id="projects">
+      <p class="section-label">PROJECTS</p>
+      <div class="section-head">
+        <div>
+          <h2>3 strong GitHub projects</h2>
+          <p class="section-subtext">Replace the placeholder links below with your real GitHub repos and live demos.</p>
+        </div>
       </div>
-      <div class="grid three">
-        <article class="project-card">
-          <span class="tag">Front End</span>
+
+      <div class="projects-grid">
+        <article class="card project-card">
+          <span class="project-tag">Front End</span>
           <h3>Responsive Business Landing Page</h3>
           <p>
             A conversion-focused landing page built with semantic HTML, modern CSS, and smooth responsive behavior across devices.
@@ -96,13 +113,13 @@
             <li>Fast load performance</li>
           </ul>
           <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub Repo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           </div>
         </article>
 
-        <article class="project-card">
-          <span class="tag">JavaScript</span>
+        <article class="card project-card">
+          <span class="project-tag">JavaScript</span>
           <h3>Task Tracker Web App</h3>
           <p>
             A clean productivity app that lets users add, complete, filter, and manage tasks with a simple interface.
@@ -113,13 +130,13 @@
             <li>Reusable UI patterns</li>
           </ul>
           <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub Repo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           </div>
         </article>
 
-        <article class="project-card">
-          <span class="tag">API Project</span>
+        <article class="card project-card">
+          <span class="project-tag">API Project</span>
           <h3>Weather Dashboard</h3>
           <p>
             A weather app that fetches live data from an external API and displays current conditions in a clean dashboard view.
@@ -130,75 +147,61 @@
             <li>Responsive data cards</li>
           </ul>
           <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub Repo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">Professional Signals</p>
-        <h2>What recruiters want to see</h2>
-      </div>
-      <div class="grid two">
-        <article class="card checklist">
-          <h3>Clean Git commit history</h3>
-          <p>Use descriptive commits like:</p>
-          <code>feat: add responsive mobile navigation</code>
-          <code>fix: correct contact form spacing on tablet</code>
-          <code>refactor: simplify project card component styles</code>
+    <section class="section container" id="artwork">
+      <p class="section-label">ARTWORK</p>
+      <h2>Creative direction and visual work</h2>
+      <p class="section-subtext wider">
+        This section can showcase UI mockups, poster concepts, motion stills, or project artwork.
+        Replace the placeholders with screenshots from your work, Figma concepts, or branded visuals.
+      </p>
+
+      <div class="art-grid">
+        <article class="card art-card">
+          <div class="art-placeholder">UI / UX</div>
+          <h3>Interface Concepts</h3>
+          <p>Show polished layout design, design systems, or dashboard mockups here.</p>
         </article>
-        <article class="card checklist">
-          <h3>Live deployed apps</h3>
-          <p>
-            Include working links for every featured project so hiring teams can test the product immediately.
+        <article class="card art-card">
+          <div class="art-placeholder">Branding</div>
+          <h3>Visual Identity</h3>
+          <p>Add logos, style explorations, and social graphics that support your projects.</p>
+        </article>
+        <article class="card art-card">
+          <div class="art-placeholder">Case Study</div>
+          <h3>Process & Presentation</h3>
+          <p>Use this area for before/after redesigns, moodboards, or UX presentation frames.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <div class="card contact-card">
+        <div>
+          <p class="section-label">CONTACT</p>
+          <h2>Let’s build something strong.</h2>
+          <p class="section-subtext">
+            Available for junior web development roles, freelance work, and front-end collaborations.
           </p>
-          <p>Best deployment options: GitHub Pages, Vercel, or Netlify.</p>
-        </article>
-      </div>
-    </section>
+        </div>
 
-    <section id="artwork" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">Artwork</p>
-        <h2>Portfolio visuals</h2>
-        <p>
-          These cards can be replaced with screenshots of your web apps, UI designs, or branded project mockups.
-        </p>
-      </div>
-      <div class="grid three artwork-grid">
-        <div class="art-card art-one">
-          <div class="art-label">UI Mockup 01</div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:your@email.com">your@email.com</a>
+          <a class="contact-link" href="https://github.com/chavescj1-star" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-        <div class="art-card art-two">
-          <div class="art-label">UI Mockup 02</div>
-        </div>
-        <div class="art-card art-three">
-          <div class="art-label">UI Mockup 03</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Ready for interviews and junior developer roles</h2>
-      </div>
-      <div class="contact-card">
-        <p><strong>Name:</strong> Jordan Chaves</p>
-        <p><strong>Email:</strong> your@email.com</p>
-        <p><strong>GitHub:</strong> github.com/yourusername</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/yourusername</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Jordan Chaves. Built for junior web development applications.</p>
-    </div>
+  <footer class="site-footer container">
+    <p>© 2026 Jordan Chaves. Built for junior web development opportunities.</p>
   </footer>
 </body>
 </html>
